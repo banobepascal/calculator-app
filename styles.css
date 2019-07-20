@@ -31,8 +31,8 @@
     background-color: rgba(255, 255, 255, .9);
   }
 
-  .calculator-grid > button.operation:hover {
-    background-color: rgba(255, 255, 255, .9);
+  .calculator-grid > button .operation {
+    background: red;
   }
   
   .span-two {
