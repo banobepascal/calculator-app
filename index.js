@@ -17,7 +17,7 @@ class Calculator {
 	}
 
 	appendNumber(number){
-        if(number === '.' && this.currentOperand.includes(''))
+        if(number === '.' && this.currentOperand.includes('.')) return
 		this.currentOperand = this.currentOperand.toString() + number.toString();
 	}
 
@@ -54,7 +54,7 @@ numberButtons.forEach(button => {
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculator.appendNumber(button.innerText)
+        calculator.chooseOperation(button.innerText)
         calculator.updateDisplay();
     });
 });
