@@ -1,3 +1,10 @@
 body {
     font-family:  sans-serif;
+    background: linear-gradient(to right, #00AAFF, #00FF6C); 
+}
+
+#container {
+    width: 1000px;
+    height: 550px;
+    background-color: #f2f2f2;
 }
