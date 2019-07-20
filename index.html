@@ -9,16 +9,16 @@
 </head>
 <body>
         <div class="calculator-grid">
-                <div class="output" id="output">
-                  <div data-previous-operand class="previous-operand">
+                <div class="output" id="result">
+                  <div data-previous-operand class="previous-operand" id="history">
                         <p id="history-value"></p>
                   </div>
-                  <div data-current-operand class="current-operand">
+                  <div data-current-operand class="current-operand" id="output">
                         <p id="output-value"></p>
                   </div>
                 </div>
-                <button   id="backspace" class="span-two">AC</button>
-                <button  class="operator" id="backspace">C</button>
+                <button class="span-two" id="clear">AC</button>
+                <button class="operator" id="backspace">C</button>
                 <button  style="background: #20b2aa"  class="operator" id="÷">÷</button>
                 <button class="number" id="1">1</button>
                 <button class="number" id="2">2</button>
