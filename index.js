@@ -34,12 +34,12 @@ class Calculator {
 }
 
 
-const previousOperandTextElement = document.querySelectorAll('[data-previous-operand]');
-const currentOperandTextElement = document.querySelectorAll('[data-current-operand]');
+const previousOperandTextElement = document.querySelector('[data-previous-operand]');
+const currentOperandTextElement = document.querySelector('[data-current-operand]');
 const clearAllButton = document.querySelector('[data-all-clear]');
 const deleteButton = document.querySelector('[data-delete]');
-const numberButtons = document.querySelector('[data-number]');
-const operationButtons = document.querySelector('[data-operation]');
+const numberButtons = document.querySelectorAll('[data-number]');
+const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
@@ -49,4 +49,11 @@ numberButtons.forEach(button => {
 		calculator.appendNumber(button.innerText)
 		calculator.updateDisplay()
 	});
+});
+
+operationButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay();
+    });
 });
