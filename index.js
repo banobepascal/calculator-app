@@ -56,11 +56,16 @@ class Calculator {
         this.operation = undefined;
         this.previousOperand = ''
 
-	}
+    }
+    
+    ge
 
 	updateDisplay(){
-		this.currentOperandTextElement.innerText  = this.currentOperand;
-		this.previousOperandTextElement.innerText  = this.previousOperand;
+        this.currentOperandTextElement.innerText  = this.currentOperand;
+        if (this.operation != null) {
+            this.previousOperandTextElement.innerText  = 
+            `${this.previousOperand} ${this.operation}`;
+        }
 	}
 }
 
@@ -98,3 +103,8 @@ clearAllButton.addEventListener('click', button => {
     calculator.clear();
     calculator.updateDisplay();
 });
+
+deleteButton.addEventListener('click', button => {
+    calculator.delete();
+    calculator.updateDisplay();
+})
