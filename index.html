@@ -9,28 +9,32 @@
 </head>
 <body>
         <div class="calculator-grid">
-                <div class="output">
-                  <div data-previous-operand class="previous-operand"></div>
-                  <div data-current-operand class="current-operand"></div>
+                <div class="output" id="output">
+                  <div data-previous-operand class="previous-operand">
+                        <p id="history-value"></p>
+                  </div>
+                  <div data-current-operand class="current-operand">
+                        <p id="output-value"></p>
+                  </div>
                 </div>
-                <button data-all-clear class="span-two">AC</button>
-                <button data-delete>C</button>
-                <button  style="background: #20b2aa" data-operation class="operation">÷</button>
-                <button data-number>1</button>
-                <button data-number>2</button>
-                <button data-number>3</button>
-                <button  style="background: #ffa500" data-operation class="operation">*</button>
-                <button data-number>4</button>
-                <button data-number>5</button>
-                <button data-number>6</button>
-                <button  style="background: #f08080" data-operation class="operation">+</button>
-                <button data-number>7</button>
-                <button data-number>8</button>
-                <button data-number>9</button>
-                <button  style="background: #9e7586" data-operation class="operation">-</button>
-                <button data-number>.</button>
-                <button data-number>0</button>
-                <button style="background: #9b7de0" data-equals class="span-two">=</button>
+                <button   id="backspace" class="span-two">AC</button>
+                <button  class="operator" id="backspace">C</button>
+                <button  style="background: #20b2aa"  class="operator" id="÷">÷</button>
+                <button class="number" id="1">1</button>
+                <button class="number" id="2">2</button>
+                <button class="number" id="3">3</button>
+                <button  style="background: #ffa500"  class="operator" id="*">*</button>
+                <button class="number" id="4">4</button>
+                <button class="number" id="5">5</button>
+                <button class="number" id="6">6</button>
+                <button  style="background: #f08080"  class="operator" id="+">+</button>
+                <button class="number" id="7">7</button>
+                <button class="number" id="8">8</button>
+                <button class="number" id="9">9</button>
+                <button  style="background: #9e7586"  class="operator" id="-">-</button>
+                <button class="number" id=".">.</button>
+                <button class="number" id="0">0</button>
+                <button style="background: #9b7de0" class="span-two" id="=">=</button>
               </div>
   <script src="index.js"></script>  
 </body>
