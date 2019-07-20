@@ -58,13 +58,18 @@ class Calculator {
 
     }
     
-    ge
+    getDisplayNumber(number) {
+        const floatNumber = parseFloat(number);
+        if(isNaN(floatNumber)) return '';
+        return floatNumber.toLocaleString('en');
+    }
 
 	updateDisplay(){
-        this.currentOperandTextElement.innerText  = this.currentOperand;
+        this.currentOperandTextElement.innerText  = 
+        this.getDisplayNumber(this.currentOperand);
         if (this.operation != null) {
             this.previousOperandTextElement.innerText  = 
-            `${this.previousOperand} ${this.operation}`;
+            `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`;
         }
 	}
 }
