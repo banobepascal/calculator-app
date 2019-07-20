@@ -17,7 +17,8 @@ class Calculator {
 	}
 
 	appendNumber(number){
-		this.currentOperand = number;
+        if(number === '.' && this.currentOperand.includes(''))
+		this.currentOperand = this.currentOperand.toString() + number.toString();
 	}
 
 	chooseOperation(operation){
