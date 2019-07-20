@@ -49,7 +49,12 @@ class Calculator {
             case '÷':
             computation = prev / current
             break;
+            default:
+                return;
         }
+        this.currentOperand = computation;
+        this.operation = undefined;
+        this.previousOperand = ''
 
 	}
 
@@ -87,4 +92,9 @@ operationButtons.forEach(button => {
 equalsButton.addEventListener('click', button => {
     calculator.compute();
     calculator.updateDisplay();
-})
+});
+
+clearAllButton.addEventListener('click', button => {
+    calculator.clear();
+    calculator.updateDisplay();
+});
