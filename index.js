@@ -29,7 +29,7 @@ class Calculator {
 	}
 
 	updateDisplay(){
-		this.currentOperandTextElement = this.currentOperand;
+		this.currentOperandTextElement.innerText  = this.currentOperand;
 	}
 }
 
